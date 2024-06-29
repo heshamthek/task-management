@@ -101,7 +101,7 @@ async function signIn() {
 			console.log("Local storage 'login' set to true.");
 			// alert("Sign-in successful!");
             // window.location.href ="";
-            window.location.href = 'task_card.html';
+            window.location.href = 'dashboard.html';
         } else {
             console.log("Invalid username or password.");
             alert("Invalid username or password.");

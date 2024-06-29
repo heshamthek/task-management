@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Custom Admin</title>
+    <link href="https://use.fontawesome.com/releases/v6.3.0/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style/dashboard.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a href="index.html">Manage !t</a>
+            <button class="btn" id="sidebarToggle"><i class="fas fa-bars"></i></button>
+        </div>
+        <form class="input-group">
+            <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..."
+                aria-describedby="btnNavbarSearch" />
+            <button class="btn" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+        </form>
+    </nav>
+    <div class="sb-sidenav" id="sidebar">
+        <div class="projects">
+            <!-- Repeatable content -->
+            <p>ux project</p>
+            <p>Ui project</p>
+            <p>java script tasks</p>
+            <p>Htnl tasks</p>
+            <p>Css Tasks</p>
+            <p>To Do Project</p>
+            <!-- Add more projects as needed -->
+        </div>
+        <div class="add-project">
+            <button id="newProjectkBtn"><i class="fas fa-plus"></i> New Project</button>
+        </div>
+    </div>
+    <div class="container-fluid" id="mainContent">
+        
+        <div class="crad_container">
+            <div class="status_task_card">
+                <p>TODO <span>3</span></p>
+                <div class="tasks">
+                    <div>
+                        <p class="title">
+                            UX Adjustments
+                        </p>
+                        <p class="desc">
+                            Last updates to make the UI from what you did before.
+                        </p>
+                        <div class="status_data">
+                            <p>to do</p>
+                            <div>
+
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <span>2024-6-29</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="status_task_card">
+                <p>IN WORK <span>5</span></p>
+                <div class="tasks">
+                    <div>
+                        <p class="title">
+                            UX Adjustments
+                        </p>
+                        <p class="desc">
+                            Last updates to make the UI from what you did before.
+                        </p>
+                        <div class="status_data">
+                            <p>to do</p>
+                            <div>
+
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <span>2024-6-29</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="status_task_card">
+                <p>COMPLETED <span>6</span></p>
+                <div class="tasks">
+                    <div>
+                        <p class="title">
+                            UX Adjustments
+                        </p>
+                        <p class="desc">
+                            Last updates to make the UI from what you did before.
+                        </p>
+                        <div class="status_data">
+                            <p>to do</p>
+                            <div>
+
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <span>2024-6-29</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Repeat content blocks as needed -->
+        </div>
+    </div>
+    <button class="btn-floating" id="newTaskBtn"><i class="fas fa-plus"></i> New Task</button>
+    <script>
+        document.getElementById('sidebarToggle').addEventListener('click', function () {
+            document.getElementById('sidebar').classList.toggle('collapsed');
+            document.getElementById('mainContent').classList.toggle('collapsed');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,231 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    /* background-color: #343a40; */
+    background-color: rgb(255,75,43);
+    /* background: linear-gradient(90deg, rgba(255,75,43,1) 17%, rgba(255,65,108,1) 81%); */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 56px;
+}
+
+.navbar-brand {
+    margin-right: auto;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar .input-group {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+}
+
+.navbar .form-control {
+    padding: 0.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+.navbar .btn {
+    background-color: #ff4b2b;
+    border: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    margin-left: 0.5rem;
+    font-size: 1em;
+}
+
+/* ------------------------------------------------------------- */
+.sb-sidenav {
+    background-color: #343a40;
+    color: #fff;
+    width: 250px;
+    height: calc(100% - 56px); /* Adjust height to fit below navbar */
+    position: fixed;
+    top: 56px;
+    left: 0;
+    padding-top: 1rem;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+.sb-sidenav{
+    background-color: rgb(255,75,43);
+    /* background: linear-gradient(90deg, rgba(255,75,43,1) 17%, rgba(255,65,108,1) 81%); */
+}
+.sb-sidenav.collapsed {
+    transform: translateX(-250px);
+}
+
+.sb-sidenav p {
+    padding: 15px;
+    margin: 0;
+}
+.sb-sidenav p:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.132);
+  
+}
+
+.sb-sidenav .add-project {
+    margin-top: auto; /* Push button to bottom */
+    padding: 0.75rem 1.5rem;
+    margin-bottom: 20px;
+}
+
+.add-project button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffffff;
+    border: none;
+    color: rgb(0, 0, 0);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-project button:hover {
+    background-color: #ffffff7d;
+}
+
+/* -------------------------------------------------------------- */
+.container-fluid {
+    margin-left: 250px;
+    padding: 1rem;
+    margin-top: 56px;
+    transition: margin-left 0.3s ease;
+    height: calc(100% - 56px); /* Adjust height to fit below navbar */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.container-fluid.collapsed {
+    margin-left: 0;
+}
+
+.breadcrumb {
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    list-style: none;
+    background-color: #e9ecef;
+    border-radius: 0.25rem;
+}
+
+.breadcrumb-item.active {
+    color: #6c757d;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.crad_container {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3 , 1fr);
+}
+
+.status_task_card {
+    flex: 1;
+    flex-wrap: wrap;
+    padding: 25px;
+    /* min-width: 300px; */
+
+   
+}
+.status_task_card > p{
+    font-weight: bold;
+    font-size: 20px;
+    color:  #da690d;
+   
+}
+.status_task_card > p span{
+    font-weight: bold;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: rgba(255, 0, 0, 0.725);
+    border-radius: 12px;
+    padding: 10px;
+   
+}
+.status_task_card .tasks{
+    padding: 20px;
+    margin: 0.5rem;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+.tasks .title {
+    font-weight: bold;
+}
+.tasks .desc {
+    font-weight: lighter;
+}
+.tasks .status_data{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.tasks .status_data p{
+    background-color: rgba(255, 255, 0, 0.662);
+    font-size: 18px;
+    padding: 10px 30px;
+    font-weight: 400;
+    border-radius: 12px;
+    color: gray;
+}
+.tasks .status_data i{
+    font-size: 24px;
+    padding: 5px;
+    font-weight: 400;
+    border-radius: 12px;
+    color: #ff4b2b;;
+}
+
+/* ------------------------------------------------------------- */
+.btn-floating:hover {
+    background-color: #da0d18;
+}
+
+.btn-floating {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff4b2b;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
