@@ -5,8 +5,7 @@
       "userFirstName": "Mustafa",
       "userSecondName": "Qarqash",
       "userEmail": "mostfakarkash@gmail.com",
-      "userPassword": "tnlmhgffnh3",
-      "id": "3677"
+      "userPassword": "tnlmhgffnh3"
     },
     {
       "userId": 2,
@@ -67,7 +66,7 @@
     {
       "id": "e791",
       "userId": 5876,
-      "userFirstName": "hesham",
+      "userFirstName": "Hesham",
       "userSecondName": "335566",
       "userEmail": "hesham335566@gmail.com",
       "userPassword": "Mostfa7**"
@@ -75,10 +74,50 @@
     {
       "id": "7e84",
       "userId": 8024,
-      "userFirstName": "hesham",
+      "userFirstName": "Hesham",
       "userSecondName": "335566",
       "userEmail": "hesham335566@gmail.com",
       "userPassword": "mvlfdmvklndf"
+    }
+  ],
+  "projects": [
+    {
+      "userId": 1,
+      "projectId": 1,
+      "projectTitle": ".................",
+      "projectDesc": "..................",
+      "projectTasks": [
+        {
+          "taskId": 1,
+          "taskTitle": ".................",
+          "deadLine": "28/6/2024",
+          "status": [
+            "todo",
+            "progress",
+            "completed"
+          ],
+          "history": ""
+        }
+      ]
+    },
+    {
+      "userId": 2,
+      "projectId": 2,
+      "projectTitle": ".................",
+      "projectDesc": "..................",
+      "projectTasks": [
+        {
+          "taskId": 1,
+          "taskTitle": ".................",
+          "deadLine": "28/6/2024",
+          "status": [
+            "todo",
+            "progress",
+            "completed"
+          ],
+          "history": ""
+        }
+      ]
     }
   ]
 }
