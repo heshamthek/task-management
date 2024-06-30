@@ -9,9 +9,7 @@ body {
 }
 
 .navbar {
-    /* background-color: #343a40; */
-    background-color: rgb(255,75,43);
-    /* background: linear-gradient(90deg, rgba(255,75,43,1) 17%, rgba(255,65,108,1) 81%); */
+    background-color: rgb(255, 75, 43);
     color: #fff;
     display: flex;
     align-items: center;
@@ -64,7 +62,7 @@ body {
     background-color: #343a40;
     color: #fff;
     width: 250px;
-    height: calc(100% - 56px); /* Adjust height to fit below navbar */
+    height: calc(100% - 56px);
     position: fixed;
     top: 56px;
     left: 0;
@@ -72,12 +70,13 @@ body {
     transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
-    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-y: auto;
 }
-.sb-sidenav{
-    background-color: rgb(255,75,43);
-    /* background: linear-gradient(90deg, rgba(255,75,43,1) 17%, rgba(255,65,108,1) 81%); */
+
+.sb-sidenav {
+    background-color: rgb(255, 75, 43);
 }
+
 .sb-sidenav.collapsed {
     transform: translateX(-250px);
 }
@@ -86,14 +85,14 @@ body {
     padding: 15px;
     margin: 0;
 }
-.sb-sidenav p:hover{
+
+.sb-sidenav p:hover {
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.132);
-  
 }
 
 .sb-sidenav .add-project {
-    margin-top: auto; /* Push button to bottom */
+    margin-top: auto;
     padding: 0.75rem 1.5rem;
     margin-bottom: 20px;
 }
@@ -118,8 +117,8 @@ body {
     padding: 1rem;
     margin-top: 56px;
     transition: margin-left 0.3s ease;
-    height: calc(100% - 56px); /* Adjust height to fit below navbar */
-    overflow-y: auto; /* Enable vertical scrolling */
+    height: calc(100% - 56px);
+    overflow-y: auto;
 }
 
 .container-fluid.collapsed {
@@ -149,52 +148,55 @@ body {
 .crad_container {
     display: grid;
     flex-wrap: wrap;
-    grid-template-columns: repeat(3 , 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .status_task_card {
     flex: 1;
     flex-wrap: wrap;
     padding: 25px;
-    /* min-width: 300px; */
+}
 
-   
-}
-.status_task_card > p{
+.status_task_card>p {
     font-weight: bold;
     font-size: 20px;
-    color:  #da690d;
-   
+    color: #da690d;
 }
-.status_task_card > p span{
+
+.status_task_card>p span {
     font-weight: bold;
     font-size: 20px;
-    color: #ffffff;
-    background-color: rgba(255, 0, 0, 0.725);
+    /* color: #ffffff; */
+    color: #44494edb;
+    /* background-color: rgba(255, 0, 0, 0.725); */
     border-radius: 12px;
     padding: 10px;
-   
 }
-.status_task_card .tasks{
+
+.status_task_card .tasks {
     padding: 20px;
     margin: 0.5rem;
     background-color: #fff;
     border-radius: 0.25rem;
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
+
 .tasks .title {
     font-weight: bold;
 }
+
 .tasks .desc {
     font-weight: lighter;
 }
-.tasks .status_data{
+
+.tasks .status_data {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
 }
-.tasks .status_data p{
+
+.tasks .status_data p {
     background-color: rgba(255, 255, 0, 0.662);
     font-size: 18px;
     padding: 10px 30px;
@@ -202,30 +204,233 @@ body {
     border-radius: 12px;
     color: gray;
 }
-.tasks .status_data i{
+
+.tasks .status_data i {
     font-size: 24px;
     padding: 5px;
     font-weight: 400;
     border-radius: 12px;
-    color: #ff4b2b;;
+    color: #ff4b2b;
 }
 
 /* ------------------------------------------------------------- */
-.btn-floating:hover {
-    background-color: #da0d18;
-}
 
-.btn-floating {
+/* Button styles */
+
+.add-task-btn {
     position: fixed;
     bottom: 20px;
     right: 20px;
     background-color: #ff4b2b;
     color: #fff;
-    padding: 0.75rem 1.5rem;
+    padding: 12px 24px;
     border-radius: 12px;
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
     border: none;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
+}
+
+.add-task-btn:hover {
+    background-color: #da0d18;
+}
+
+/* Task Modal styles */
+
+.modal-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    display: none;
+}
+
+.modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    pointer-events: none;
+}
+
+.modal {
+    background-color: #fdfffe;
+    width: 400px;
+    max-width: 90%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: all;
+}
+
+.modal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-content input[type="text"],
+.modal-content textarea,
+.modal-content input[type="date"],
+.modal-content select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.modal-content textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.modal-content select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.modal-content .add-btn {
+    background-color: #ff4b2b;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content .add-btn:hover {
+    background-color: #FF416C;
+}
+
+.close-modal-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #FF4B2B;
+    font-size: 24px;
+    padding: 5px;
+}
+
+.close-modal-btn:hover {
+    color: #da0d18;
+}
+
+/* Project Modal styles */
+
+.project-modal-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    display: none;
+}
+
+.project-modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    pointer-events: none;
+}
+
+.project-modal {
+    background-color: #fdfffe;
+    width: 400px;
+    max-width: 90%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: all;
+}
+
+.project-modal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.project-modal-content input[type="text"],
+.project-modal-content textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.project-modal-content textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.project-modal-content .add-project-btn {
+    background-color: #ff4b2b;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.project-modal-content .add-project-btn:hover {
+    background-color: #FF416C;
+}
+
+.close-project-modal-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #FF4B2B;
+    font-size: 24px;
+    padding: 5px;
+}
+
+.close-project-modal-btn:hover {
+    color: #da0d18;
 }

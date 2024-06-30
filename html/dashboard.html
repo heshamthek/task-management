@@ -22,24 +22,19 @@
         </form>
     </nav>
     <div class="sb-sidenav" id="sidebar">
-        <div class="projects">
+        <div class="projects" id="projec-list">
             <!-- Repeatable content -->
-            <p>ux project</p>
-            <p>Ui project</p>
-            <p>java script tasks</p>
-            <p>Htnl tasks</p>
-            <p>Css Tasks</p>
-            <p>To Do Project</p>
+            
             <!-- Add more projects as needed -->
         </div>
         <div class="add-project">
-            <button id="newProjectkBtn"><i class="fas fa-plus"></i> New Project</button>
+            <button id="newProjectBtn"><i class="fas fa-plus"></i> New Project</button>
         </div>
     </div>
     <div class="container-fluid" id="mainContent">
-        
+
         <div class="crad_container">
-            <div class="status_task_card">
+            <div class="status_task_card" id="to-do">
                 <p>TODO <span>3</span></p>
                 <div class="tasks">
                     <div>
@@ -61,7 +56,7 @@
                 </div>
             </div>
             <!--  -->
-            <div class="status_task_card">
+            <div class="status_task_card" id="progress">
                 <p>IN WORK <span>5</span></p>
                 <div class="tasks">
                     <div>
@@ -83,7 +78,7 @@
                 </div>
             </div>
             <!--  -->
-            <div class="status_task_card">
+            <div class="status_task_card" id="completed">
                 <p>COMPLETED <span>6</span></p>
                 <div class="tasks">
                     <div>
@@ -104,18 +99,45 @@
                     </div>
                 </div>
             </div>
-
-
-
             <!-- Repeat content blocks as needed -->
         </div>
     </div>
-    <button class="btn-floating" id="newTaskBtn"><i class="fas fa-plus"></i> New Task</button>
-    <script>
-        document.getElementById('sidebarToggle').addEventListener('click', function () {
-            document.getElementById('sidebar').classList.toggle('collapsed');
-            document.getElementById('mainContent').classList.toggle('collapsed');
-        });
+
+    <button class="add-task-btn" id="btn-floating" aria-haspopup="true"> <i class="fas fa-plus" style="font-size: 18px;"></i> Add Task</button>
+
+    <div class="modal-mask"></div>
+    <div class="modal-container">
+        <div class="modal">
+            <div class="modal-content">
+                <input type="text" placeholder="Project Title" class="project-title">
+                <textarea id="task-description" placeholder="Task Description"></textarea>
+                <input type="date" class="due-date">
+                <select id="status-dropdown">
+                    <option value="todo">To Do</option>
+                    <option value="inprogress">In Progress</option>
+                    <option value="done">Done</option>
+                </select>
+                <button class="add-btn">Add</button>
+            </div>
+            <button class="close-modal-btn" role="button">X</button>
+        </div>
+    </div>
+
+    <!-- Project Modal -->
+    <div class="project-modal-mask"></div>
+    <div class="project-modal-container">
+        <div class="project-modal">
+            <div class="project-modal-content">
+                <input type="text" placeholder="Project Title" class="project-title">
+                <textarea id="project-description" placeholder="Project Description"></textarea>
+                <button class="add-project-btn">Add Project</button>
+            </div>
+            <button class="close-project-modal-btn" role="button">X</button>
+        </div>
+    </div>
+
+    <script src="../script/dashboard.js">
+       
     </script>
 </body>
 

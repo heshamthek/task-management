@@ -63,7 +63,7 @@ async function signUp() {
 
 document.getElementById("signUpButton").addEventListener("click", async () => {
     // await signUp();
-   
+
 });
 
 
@@ -97,11 +97,15 @@ async function signIn() {
 
         if (user) {
             console.log("Sign-in successful!");
-			localStorage.setItem("login", "true");
-			console.log("Local storage 'login' set to true.");
-			// alert("Sign-in successful!");
+            localStorage.setItem("login", "true");
+
+            console.log("Local storage 'login' set to true.");
+            // alert("Sign-in successful!");
             // window.location.href ="";
-            window.location.href = 'dashboard.html';
+            window.location.href = `dashboard.html?userId=${user.userId}`;
+            // Assuming user is the object containing user data
+            localStorage.setItem("userId", user.userId.toString());
+
         } else {
             console.log("Invalid username or password.");
             alert("Invalid username or password.");
@@ -115,11 +119,11 @@ async function signIn() {
 document.getElementById("signInButton").addEventListener("click", async () => {
     await signIn();
 });
-document.getElementById("goToSignIn").addEventListener("click",()=>{
-	document.getElementById("sign-in-container").style.position="absolute";
+document.getElementById("goToSignIn").addEventListener("click", () => {
+    document.getElementById("sign-in-container").style.position = "absolute";
 })
-document.getElementById("goToSignUp").addEventListener("click",()=>{
-	document.getElementById("sign-in-container").style.position="relative";
+document.getElementById("goToSignUp").addEventListener("click", () => {
+    document.getElementById("sign-in-container").style.position = "relative";
 })
 
 // Function to toggle visibility of "Sign Up" and "Sign In" buttons based on window width

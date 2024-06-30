@@ -24,100 +24,112 @@
       "id": "2983"
     },
     {
-      "id": "faaa",
       "userId": 4,
       "userFirstName": "Tala",
       "userSecondName": "Alosili",
       "userEmail": "tala_alosili@gmail.com",
-      "userPassword": "tnlmhgffnh3"
+      "userPassword": "tnlmhgffnh3",
+      "id": "faaa"
     },
     {
-      "id": "446c",
       "userId": 5522,
       "userFirstName": "Rashed",
       "userSecondName": "35468",
       "userEmail": "rashed_35468@gmail.com",
-      "userPassword": "tnlmhggfnh3"
+      "userPassword": "tnlmhggfnh3",
+      "id": "446c"
     },
     {
-      "id": "e51a",
       "userId": 1523,
       "userFirstName": "Yasmeen",
       "userSecondName": "Abuzaid",
       "userEmail": "Yasmeenabuzaid@gmail.com",
-      "userPassword": "Yasmeenabuzaid**"
+      "userPassword": "Yasmeenabuzaid**",
+      "id": "e51a"
     },
     {
-      "id": "2933",
       "userId": 2181,
       "userFirstName": "Laila",
       "userSecondName": "Yaseen",
       "userEmail": "lailaYaseen@gmail.com",
-      "userPassword": "lailaYaseen889"
+      "userPassword": "lailaYaseen889",
+      "id": "2933"
     },
     {
-      "id": "8b86",
       "userId": 3749,
       "userFirstName": "Zaid",
       "userSecondName": "Saafeen",
       "userEmail": "zaidsaafeen@gmail.com",
-      "userPassword": "Mostfa77**"
+      "userPassword": "Mostfa77**",
+      "id": "8b86"
     },
     {
-      "id": "e791",
       "userId": 5876,
       "userFirstName": "Hesham",
       "userSecondName": "335566",
       "userEmail": "hesham335566@gmail.com",
-      "userPassword": "Mostfa7**"
+      "userPassword": "Mostfa7**",
+      "id": "e791"
     },
     {
-      "id": "7e84",
       "userId": 8024,
       "userFirstName": "Hesham",
       "userSecondName": "335566",
       "userEmail": "hesham335566@gmail.com",
-      "userPassword": "mvlfdmvklndf"
+      "userPassword": "mvlfdmvklndf",
+      "id": "7e84"
     }
   ],
   "projects": [
     {
       "userId": 1,
       "projectId": 1,
-      "projectTitle": ".................",
-      "projectDesc": "..................",
-      "projectTasks": [
-        {
-          "taskId": 1,
-          "taskTitle": ".................",
-          "deadLine": "28/6/2024",
-          "status": [
-            "todo",
-            "progress",
-            "completed"
-          ],
-          "history": ""
-        }
-      ]
+      "projectTitle": "Project One nsreen",
+      "projectDesc": "Description of Project One."
     },
     {
       "userId": 2,
       "projectId": 2,
-      "projectTitle": ".................",
-      "projectDesc": "..................",
-      "projectTasks": [
-        {
-          "taskId": 1,
-          "taskTitle": ".................",
-          "deadLine": "28/6/2024",
-          "status": [
-            "todo",
-            "progress",
-            "completed"
-          ],
-          "history": ""
-        }
-      ]
+      "projectTitle": "Project Two",
+      "projectDesc": "Description of Project Two."
+    }
+  ],
+  "tasks": [
+    {
+      "taskId": 1,
+      "projectId": 1,
+      "taskTitle": "Implement User Authentication",
+      "taskDesc": "Develop authentication system using OAuth2 for secure user login.",
+      "deadLine": "2024-06-28",
+      "status": "progress",
+      "history": "245k"
+    },
+    {
+      "taskId": 2,
+      "projectId": 1,
+      "taskTitle": "Design Dashboard UI",
+      "taskDesc": "Create intuitive user interface for project management dashboard.",
+      "deadLine": "2024-06-28",
+      "status": "todo",
+      "history": "245k"
+    },
+    {
+      "taskId": 3,
+      "projectId": 1,
+      "taskTitle": "Implement Task Filtering",
+      "taskDesc": "Add functionality to filter tasks by status and deadline.",
+      "deadLine": "2024-06-28",
+      "status": "completed",
+      "history": "245k"
+    },
+    {
+      "taskId": 4,
+      "projectId": 1,
+      "taskTitle": "Optimize Database Queries",
+      "taskDesc": "Improve performance by optimizing SQL queries and indexing.",
+      "deadLine": "2024-06-28",
+      "status": "todo",
+      "history": "245k"
     }
   ]
 }
