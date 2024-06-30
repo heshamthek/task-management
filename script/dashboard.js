@@ -143,6 +143,12 @@ async function getTaskByProjectId (project) {
                         <p class="title">
                           ${task.taskTitle}
                         </p>
+                        <span class="material-symbols-outlined" id="projec-list"> 
+                            delete
+                            </span>
+                            <span class="material-symbols-outlined" >
+                                more_vert
+                                </span>
                         <p class="desc">
                            ${task.taskDesc}
                         </p>
@@ -165,6 +171,12 @@ async function getTaskByProjectId (project) {
                         <p class="title">
                           ${task.taskTitle}
                         </p>
+                        <span class="material-symbols-outlined" id="projec-list"> 
+                            delete
+                            </span>
+                            <span class="material-symbols-outlined" >
+                                more_vert
+                                </span>
                         <p class="desc">
                            ${task.taskDesc}
                         </p>
@@ -187,6 +199,12 @@ async function getTaskByProjectId (project) {
                         <p class="title">
                           ${task.taskTitle}
                         </p>
+                        <span class="material-symbols-outlined" id="projec-list"> 
+                            delete
+                            </span>
+                            <span class="material-symbols-outlined" >
+                                more_vert
+                                </span>
                         <p class="desc">
                            ${task.taskDesc}
                         </p>
@@ -207,3 +225,23 @@ async function getTaskByProjectId (project) {
         console.error('Fetch tasks error:', error);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

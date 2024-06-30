@@ -434,3 +434,6 @@ body {
 .close-project-modal-btn:hover {
     color: #da0d18;
 }
+.material-symbols-outlined{
+    cursor: pointer;
+}
