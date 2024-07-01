@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Custom Admin</title>
     <link href="https://use.fontawesome.com/releases/v6.3.0/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="../style/dashboard.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
@@ -17,10 +17,11 @@
             <button class="btn" id="sidebarToggle"><i class="fas fa-bars"></i></button>
         </div>
         <form class="input-group">
-            <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..."
-                aria-describedby="btnNavbarSearch" />
+            <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" id="searchInput" />
             <button class="btn" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+            <p class="btn1" id="logout-btn"> Logout</p>
         </form>
+        
     </nav>
     <div class="sb-sidenav" id="sidebar">
         <div class="projects" id="projec-list">
@@ -33,128 +34,61 @@
         </div>
     </div>
     <div class="container-fluid" id="mainContent">
-
+        <p class="project-name" id="project-name">Project name</p>
+        <p class="project-desc" id="project-desc">Project name</p>
         <div class="crad_container">
             <div class="status_task_card" id="to-do">
-                <p>TODO <span>3</span></p>
-                <div class="tasks">
-                    <div>
-                        <p class="title">
-                            UX Adjustments
-                        </p>
-                        <span class="material-symbols-outlined" id="projec-list"> 
-                            delete
-                            </span>
-                            <span class="material-symbols-outlined" >
-                                more_vert
-                                </span>
-                        <p class="desc">
-                            Last updates to make the UI from what you did before.
-                        </p>
-                        <div class="status_data">
-                            <p>to do</p>
-                            <div>
+                
 
-                                <i class="fa-solid fa-calendar-days"></i>
-                                <span>2024-6-29</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
             <!--  -->
             <div class="status_task_card" id="progress">
-                <p>IN WORK <span>5</span></p>
-                <div class="tasks">
-                    <div>
-                        <p class="title">
-                            UX Adjustments
-                        </p>
-                        <span class="material-symbols-outlined" id="projec-list">
-                            delete
-                            </span>
-                            <span class="material-symbols-outlined">
-                                more_vert
-                                </span>
-                        <p class="desc">
-                            Last updates to make the UI from what you did before.
-                        </p>
-                        <div class="status_data">
-                            <p>to do</p>
-                            <div>
-
-                                <i class="fa-solid fa-calendar-days"></i>
-                                <span>2024-6-29</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+             
             </div>
             <!--  -->
             <div class="status_task_card" id="completed">
-                <p>COMPLETED <span>6</span></p>
-                <div class="tasks">
-                    <div>
-                        <p class="title">
-                            UX Adjustments
-                        </p>
-                        <span class="material-symbols-outlined" id="projec-list">
-                            delete
-                            </span>
-                            <span class="material-symbols-outlined">
-                                more_vert
-                                </span>
-                        <p class="desc">
-                            Last updates to make the UI from what you did before.
-                        </p>
-                        <div class="status_data">
-                            <p>to do</p>
-                            <div>
+              
 
-                                <i class="fa-solid fa-calendar-days"></i>
-                                <span>2024-6-29</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
             <!-- Repeat content blocks as needed -->
         </div>
     </div>
 
     <button class="add-task-btn" id="btn-floating" aria-haspopup="true"> <i class="fas fa-plus" style="font-size: 18px;"></i> Add Task</button>
-
+    <!-- add task popup -->
     <div class="modal-mask"></div>
     <div class="modal-container">
-        <div class="modal">
-            <div class="modal-content">
-                <input type="text" placeholder="Project Title" class="project-title">
-                <textarea id="task-description" placeholder="Task Description"></textarea>
-                <input type="date" class="due-date">
-                <select id="status-dropdown">
-                    <option value="todo">To Do</option>
-                    <option value="inprogress">In Progress</option>
-                    <option value="done">Done</option>
-                </select>
-                <button class="add-btn">Add</button>
+        <div class="modal" id="modal">
+            <div class="modal-content" id="modal-content">
+                <input type="text" placeholder="Task Title" class="project-title" id="task-title">
+                <textarea id="task-description" placeholder="Task Description" id="task-description"></textarea>
+                <input type="date" class="due-date" id="task-deadLine">
+                <select id="mySelect">
+                    <option value="todo">todo</option>
+                    <option value="progress">progress</option>
+                    <option value="completed">completed</option>
+                  </select>
+                <button class="add-btn" id="task-add-btn">Add</button>
             </div>
             <button class="close-modal-btn" role="button">X</button>
         </div>
     </div>
 
     <!-- Project Modal -->
-    <div class="project-modal-mask"></div>
-    <div class="project-modal-container">
-        <div class="project-modal">
-            <div class="project-modal-content">
-                <input type="text" placeholder="Project Title" class="project-title">
-                <textarea id="project-description" placeholder="Project Description"></textarea>
-                <button class="add-project-btn">Add Project</button>
+    <div class="project-modal-mask" ></div>
+    <div class="project-modal-container" id="project-modal-container" >
+        <div class="project-modal" id="project-modal">
+            <div class="project-modal-content" id="project-modal-content">
+                <input type="text" placeholder="Project Title" class="project-title" id="project-title">
+                <textarea id="project-description" placeholder="Project Description" id="project-description"></textarea>
+                <button class="add-project-btn" id="add-project-btn">Add Project</button>
             </div>
-            <button class="close-project-modal-btn" role="button">X</button>
+            <button class="close-project-modal-btn" role="button" >X</button>
         </div>
     </div>
 
+
+    
     <script src="../script/dashboard.js">
        
     </script>

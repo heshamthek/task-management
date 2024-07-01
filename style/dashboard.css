@@ -80,16 +80,24 @@ body {
 .sb-sidenav.collapsed {
     transform: translateX(-250px);
 }
-
-.sb-sidenav p {
+.project-content{
     padding: 15px;
-    margin: 0;
 }
-
-.sb-sidenav p:hover {
+.project-content:hover{
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.132);
 }
+.sb-sidenav .project-title {
+    /* font-size: 15px; */
+    margin: 0;
+}
+.sb-sidenav .project-desc{
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.886);
+
+}
+
+
 
 .sb-sidenav .add-project {
     margin-top: auto;
@@ -124,27 +132,31 @@ body {
 .container-fluid.collapsed {
     margin-left: 0;
 }
-
-.breadcrumb {
-    padding: 0.75rem 1rem;
-    margin-bottom: 1rem;
-    list-style: none;
-    background-color: #e9ecef;
-    border-radius: 0.25rem;
+.project-name{
+    padding: 10px 24px;  
+    font-weight: bolder;
+    font-size: 25px;
+    color:#da0d18;
+}
+.project-desc{
+    padding: 0px 24px;  
+    font-weight: normal;
+    font-size: 18px;
+    color: gray;
 }
 
-.breadcrumb-item.active {
-    color: #6c757d;
+#status-p{
+    color: white;
 }
-
-.mt-4 {
-    margin-top: 1.5rem;
+.btn1{
+    border: 1px solid white;
+    border-radius: 12px;
+    padding: 10px;
 }
-
-.mb-4 {
-    margin-bottom: 1.5rem;
+.btn1:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.553);
 }
-
 .crad_container {
     display: grid;
     flex-wrap: wrap;
@@ -155,6 +167,25 @@ body {
     flex: 1;
     flex-wrap: wrap;
     padding: 25px;
+}
+.card-head{
+    display: flex;
+    justify-content: space-between;
+
+}.edit-del{
+    margin-top: 14px;
+}
+.material-symbols-outlined
+{
+    cursor: pointer;
+    
+}
+.delete:hover{
+    color: #da0d18;
+
+}
+.more:hover{
+    color:#da690d ;
 }
 
 .status_task_card>p {
@@ -434,6 +465,109 @@ body {
 .close-project-modal-btn:hover {
     color: #da0d18;
 }
-.material-symbols-outlined{
+/* ----------------------------- */
+/* Edit Task Modal styles */
+.edit-task-modal-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    display: none;
+}
+
+.edit-task-modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    pointer-events: none;
+}
+
+.edit-task-modal {
+    background-color: #fdfffe;
+    width: 400px;
+    max-width: 90%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: all;
+}
+
+.edit-task-modal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.edit-task-modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.edit-task-modal-content input[type="text"],
+.edit-task-modal-content textarea,
+.edit-task-modal-content input[type="date"],
+.edit-task-modal-content select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.edit-task-modal-content textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.edit-task-modal-content select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.edit-task-modal-content .save-edit-task-btn {
+    background-color: #ff4b2b;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-task-modal-content .save-edit-task-btn:hover {
+    background-color: #FF416C;
+}
+
+.close-edit-task-modal-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #FF4B2B;
+    font-size: 24px;
+    padding: 5px;
+  
+}
+
+.close-edit-task-modal-btn:hover {
+    color: #da0d18;
 }

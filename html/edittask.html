@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Form</title>
+    <link rel="stylesheet" href="../style/edittask.css">
+</head>
+<body>
+    <header>
+        <h3>Manag !t</h3>
+    </header>
+    <div class="main">
+        <div class="edit-container">
+            <div class="form1">
+         
+                <div class="form-header">
+                    <input type="text" class="task-title" required id="task-title">
+                    <button type="button" class="close-btn">&times;</button>
+                </div>
+                <textarea class="task-desc" required id="task-desc"></textarea>
+                <input type="date" class="task-date" required id="task-date">
+                <select id="mySelect">
+                    <option value="todo">ToDo</option>
+                    <option value="progress">Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+                <button type="submit" class="edit-btn" id="edit-btn">Edit</button>
+            </div>
+           
+        </div>
+    </div>
+    <script src="../script/edittask.js"></script>
+</body>
+</html>
