@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <link rel="icon" type="image/x-icon" href="../imges/it.png">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="../style/login.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
-
 <body>
     <div class="container" id="container">
         <div class="form-container sign-up-container" id="sign-up-container">
@@ -18,11 +19,9 @@
                 <input type="text" placeholder="Name" id="userNameSignUp" />
                 <input type="text" placeholder="Last Name" id="userLastNameSignUp" />
                 <input type="email" placeholder="Email" id="userEmailSignUp" />
-                
                 <input type="password" placeholder="Password" id="userPassSignUp" />
                 <button id="signUpButton">Sign Up</button>
                 <button id="goToSignIn" style="margin: 10px;">go to Sign In</button>
-                
             </section>
         </div>
         <div class="form-container sign-in-container" id="sign-in-container">
@@ -32,10 +31,8 @@
                 <span>or use your account</span>
                 <input type="email" placeholder="Email" id="userEmailSignIn" />
                 <input type="password" placeholder="Password" id="userPassSignIn" />
-              
                 <button id="signInButton">Sign In</button>
                 <button id="goToSignUp" style="margin: 10px;">go to Sign Up</button>
-               
             </section>
         </div>
         <div class="overlay-container">
@@ -44,7 +41,6 @@
                     <h1>Welcome Back!</h1>
                     <p>To keep connected with us please login with your personal info</p>
                     <button class="ghost" id="signIn">Sign In</button>
-                    <!-- <button class="ghost" id="goToSignUp">go to Sign Up</button> -->
                 </div>
                 <div class="overlay-panel overlay-right">
                     <h1>Hello, Friend!</h1>
@@ -57,5 +53,4 @@
 
     <script src="../script/login.js"></script>
 </body>
-
 </html>

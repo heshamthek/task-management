@@ -62,7 +62,7 @@ async function signUp() {
 }
 
 document.getElementById("signUpButton").addEventListener("click", async () => {
-    // await signUp();
+    await signUp();
 
 });
 

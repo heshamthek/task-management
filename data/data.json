@@ -79,6 +79,30 @@
       "userEmail": "hesham.335566@example.com",
       "userPassword": "mvlfdmvklndf",
       "id": "c224"
+    },
+    {
+      "id": "b108",
+      "userId": 20,
+      "userFirstName": "ss",
+      "userSecondName": "s",
+      "userEmail": "s",
+      "userPassword": "s"
+    },
+    {
+      "id": "37f6",
+      "userId": 2406,
+      "userFirstName": "d",
+      "userSecondName": "d",
+      "userEmail": "dd",
+      "userPassword": "aaaaa"
+    },
+    {
+      "id": "0273",
+      "userId": 2639,
+      "userFirstName": "67",
+      "userSecondName": "456",
+      "userEmail": "5678",
+      "userPassword": "000"
     }
   ],
   "projects": [
@@ -151,6 +175,27 @@
       "projectId": 209176,
       "projectTitle": "",
       "projectDesc": ""
+    },
+    {
+      "id": "7c69",
+      "userId": "1",
+      "projectId": 885846,
+      "projectTitle": "fg",
+      "projectDesc": "ghj"
+    },
+    {
+      "id": "0ab1",
+      "userId": "1",
+      "projectId": 965641,
+      "projectTitle": "",
+      "projectDesc": ""
+    },
+    {
+      "id": "70cf",
+      "userId": "2639",
+      "projectId": 101408,
+      "projectTitle": "project1",
+      "projectDesc": "hi, everyone, this is our project description"
     }
   ],
   "tasks": [
@@ -231,28 +276,36 @@
       "history": "245k"
     },
     {
-      "id": "579028",
+      "id": "607076",
       "projectId": "1",
-      "taskTitle": "dddd",
-      "taskDesc": "aaa",
-      "deadLine": "",
+      "taskTitle": "task 2",
+      "taskDesc": "create css style",
+      "deadLine": "2024-07-02",
+      "status": "todo"
+    },
+    {
+      "id": "590957",
+      "projectId": 101408,
+      "taskTitle": "task1",
+      "taskDesc": "this is a to do task",
+      "deadLine": "2024-07-03",
+      "status": "todo"
+    },
+    {
+      "id": "313665",
+      "projectId": 101408,
+      "taskTitle": "task2",
+      "taskDesc": "this is in progress task",
+      "deadLine": "2024-07-03",
+      "status": "progress"
+    },
+    {
+      "id": "667347",
+      "projectId": 101408,
+      "taskTitle": "task3",
+      "taskDesc": "this is a done task",
+      "deadLine": "2024-07-03",
       "status": "completed"
-    },
-    {
-      "id": "434005",
-      "projectId": "1",
-      "taskTitle": "ssss",
-      "taskDesc": "ssss",
-      "deadLine": "",
-      "status": "todo"
-    },
-    {
-      "id": "222915",
-      "projectId": "1",
-      "taskTitle": "hesham najem",
-      "taskDesc": "to do all the items today",
-      "deadLine": "",
-      "status": "todo"
     }
   ]
 }

@@ -1,28 +1,76 @@
-body {
-    font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+US+Modern:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&display=swap');
+
+
+* {
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
+    box-sizing: border-box;
+}
+
+
+:root {
+    /* font family */
+    --headers: Playwrite US Modern ;
+    --p:"LXGW WenKai Mono TC";
+
+    /* font size */
+    --headSize:3rem;
+    --pSize:1.2rem;
+    --btnSise:.9rem;
+
+    /* colors */
+    --light: #ffe9e6;
+    --orange:rgb(255, 75, 43);
+    --pink:rgb(255, 65, 108);
+    --gradientY:linear-gradient(180deg, #FF416C 0%, #FF4B2B 100%);
+    --gradientX:linear-gradient(270deg, #FF4B2B 0%, #FF416C 100%);
+
+  }
+/* Rectangle 26 */
+
+position: absolute;
+width: 281px;
+height: 703px;
+left: 22px;
+top: 129px;
+
+background: linear-gradient(270deg, #FF416C 0%, #FF4B2B 100%);
+border-radius: 26px;
+
+
+
+
+
+
+body {
+    background-color: #fff;
     height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: var(--p);
 }
 
 .navbar {
-    background-color: rgb(255, 75, 43);
+    background:var(--gradientX);
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 1rem;
+    padding: 1rem;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     height: 56px;
-}
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 10px 10px;
+    
+    }
+
 
 .navbar-brand {
+    font-family: var(--headers);
     margin-right: auto;
     font-size: 1.25rem;
     display: flex;
@@ -47,7 +95,7 @@ body {
 }
 
 .navbar .btn {
-    background-color: #ff4b2b;
+    background:none;
     border: none;
     color: #fff;
     padding: 0.5rem 1rem;
@@ -59,7 +107,8 @@ body {
 
 /* ------------------------------------------------------------- */
 .sb-sidenav {
-    background-color: #343a40;
+
+    background: var(--gradientY);
     color: #fff;
     width: 250px;
     height: calc(100% - 56px);
@@ -71,6 +120,9 @@ body {
     display: flex;
     flex-direction: column;
     overflow-y: auto;
+    border-radius: 26px;
+    margin: 20px 0;
+
 }
 
 .sb-sidenav {
@@ -152,6 +204,10 @@ body {
     border: 1px solid white;
     border-radius: 12px;
     padding: 10px;
+    font-family: var(--p);
+    margin-left: 1rem;
+    border: 2px solid white;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 .btn1:hover{
     cursor: pointer;
@@ -571,3 +627,18 @@ body {
 .close-edit-task-modal-btn:hover {
     color: #da0d18;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background-color:var(--light);
+    box-shadow: 0, 0, 10px, #ddd inset;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--gradientY);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #75a5a8;
+}  
