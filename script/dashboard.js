@@ -60,8 +60,6 @@ function closeProjectModal() {
     maskProjectModal.classList.remove("active");
     projectModal.classList.remove("active");
 }
-
-
 // -------------------------------------------------------------------------------
 let globalProjectId;
 let globalProjectArr;
@@ -186,7 +184,7 @@ async function getTasksByProjectId(project) {
         document.getElementById("completed").innerHTML = '';
         // document.getElementById("project-card-container").style.visibility="hidden";
         document.getElementById("project-card-container").style.display="none";
-
+         
         // Populate tasks for the corresponding status
         tasksData.forEach(task => {
             let statusColor = ''; // Variable to hold the background color based on status
