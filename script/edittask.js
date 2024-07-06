@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     document.getElementById("edit-btn").addEventListener("click", async () => {
         await editTaskData(id);
+        window.history.back();
     });
 });
 
@@ -52,4 +53,5 @@ async function editTaskData(id) {
 
     let data = await response.text();
     console.log(data);
+   
 }

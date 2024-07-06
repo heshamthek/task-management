@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/x-icon" href="../imges/it.png">
+    <link rel="icon" type="image/x-icon" href="../imges/it.ico">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>manage !t</title>
     <link rel="stylesheet" href="../style/login.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
@@ -16,11 +16,16 @@
                 <h1>Create Account</h1>
                 <div class="social-container"></div>
                 <span>or use your email for registration</span>
-                <input type="text" placeholder="Name" id="userNameSignUp" />
-                <input type="text" placeholder="Last Name" id="userLastNameSignUp" />
-                <input type="email" placeholder="Email" id="userEmailSignUp" />
-                <input type="password" placeholder="Password" id="userPassSignUp" />
-                <button id="signUpButton">Sign Up</button>
+                <input type="text" id="userNameSignUp" placeholder="First Name">
+            <div class="error-message" id="userNameSignUpError"></div>
+            <input type="text" id="userLastNameSignUp" placeholder="Last Name">
+            <div class="error-message" id="userLastNameSignUpError"></div>
+            <input type="email" id="userEmailSignUp" placeholder="Email">
+            <div class="error-message" id="userEmailSignUpError"></div>
+            <input type="password" id="userPassSignUp" placeholder="Password">
+            <div class="error-message" id="userPassSignUpError"></div>
+            <button id="signUpButton">Sign Up</button>
+            <div class="success-message" id="signUpSuccess"></div>
                 <button id="goToSignIn" style="margin: 10px;">go to Sign In</button>
             </section>
         </div>
@@ -29,9 +34,12 @@
                 <h1>Sign in</h1>
                 <div class="social-container"></div>
                 <span>or use your account</span>
-                <input type="email" placeholder="Email" id="userEmailSignIn" />
-                <input type="password" placeholder="Password" id="userPassSignIn" />
-                <button id="signInButton">Sign In</button>
+                <input type="email" id="userEmailSignIn" placeholder="Email">
+            <div class="error-message" id="userEmailSignInError"></div>
+            <input type="password" id="userPassSignIn" placeholder="Password">
+            <div class="error-message" id="userPassSignInError"></div>
+            <button id="signInButton">Sign In</button>
+            <div class="success-message" id="signInSuccess"></div>
                 <button id="goToSignUp" style="margin: 10px;">go to Sign Up</button>
             </section>
         </div>

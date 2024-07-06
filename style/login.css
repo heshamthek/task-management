@@ -47,7 +47,9 @@ h1 {
 h2 {
     text-align: center;
 } */
-
+button:hover{
+    cursor: pointer;
+}
 p {
     font-size: var(--pSize);
     font-weight: 100;
@@ -97,6 +99,7 @@ button.ghost {
     background-color: transparent;
     border-color: #FFFFFF;
 }
+
 
 section {
     background-color: #FFFFFF;
@@ -306,7 +309,18 @@ input {
 
     .overlay {
         display: none;
-		/* display: none; */
-		
     }
+}
+.error-message {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: -8px;
+    margin-bottom: 8px;
+}
+
+.success-message {
+    color: green;
+    font-size: 0.8rem;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }

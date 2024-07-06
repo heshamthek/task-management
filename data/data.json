@@ -5,7 +5,7 @@
       "userFirstName": "Mustafa",
       "userSecondName": "Qarqash",
       "userEmail": "mustafa.qarqash@example.com",
-      "userPassword": "tnlmhgffnh3",
+      "userPassword": "SecurePass1",
       "id": "03a1"
     },
     {
@@ -13,7 +13,7 @@
       "userFirstName": "Abdallah",
       "userSecondName": "Awaysheh",
       "userEmail": "abdallah.awaysheh@example.com",
-      "userPassword": "tnlmhgffnh3",
+      "userPassword": "SecurePass2",
       "id": "61b7"
     },
     {
@@ -21,7 +21,7 @@
       "userFirstName": "Abdullah",
       "userSecondName": "Tamimi",
       "userEmail": "abdullah.tamimi@example.com",
-      "userPassword": "tnlmhgffnh3",
+      "userPassword": "SecurePass3",
       "id": "c2b0"
     },
     {
@@ -29,15 +29,15 @@
       "userFirstName": "Tala",
       "userSecondName": "Alosili",
       "userEmail": "tala.alosili@example.com",
-      "userPassword": "tnlmhgffnh3",
+      "userPassword": "SecurePass4",
       "id": "bfa4"
     },
     {
       "userId": 5,
       "userFirstName": "Rashed",
-      "userSecondName": "35468",
-      "userEmail": "rashed.35468@example.com",
-      "userPassword": "tnlmhggfnh3",
+      "userSecondName": "Hasan",
+      "userEmail": "rashed.hasan@example.com",
+      "userPassword": "SecurePass5",
       "id": "2bf3"
     },
     {
@@ -45,7 +45,7 @@
       "userFirstName": "Yasmeen",
       "userSecondName": "Abuzaid",
       "userEmail": "yasmeen.abuzaid@example.com",
-      "userPassword": "Yasmeenabuzaid**",
+      "userPassword": "Yasmeenabuzaid",
       "id": "f94e"
     },
     {
@@ -53,7 +53,7 @@
       "userFirstName": "Laila",
       "userSecondName": "Yaseen",
       "userEmail": "laila.yaseen@example.com",
-      "userPassword": "lailaYaseen889",
+      "userPassword": "LailaYaseen889",
       "id": "3b8d"
     },
     {
@@ -61,106 +61,141 @@
       "userFirstName": "Zaid",
       "userSecondName": "Saafeen",
       "userEmail": "zaid.saafeen@example.com",
-      "userPassword": "Mostfa77**",
+      "userPassword": "Mostfa77",
       "id": "c325"
     },
     {
       "userId": 9,
       "userFirstName": "Hesham",
-      "userSecondName": "335566",
-      "userEmail": "hesham.335566@example.com",
-      "userPassword": "Mostfa7**",
+      "userSecondName": "Ahmed",
+      "userEmail": "hesham.ahmed@example.com",
+      "userPassword": "SecurePass9",
       "id": "bdb0"
     },
     {
       "userId": 10,
-      "userFirstName": "Hesham",
-      "userSecondName": "335566",
-      "userEmail": "hesham.335566@example.com",
-      "userPassword": "mvlfdmvklndf",
+      "userFirstName": "Sara",
+      "userSecondName": "Hussein",
+      "userEmail": "sara.hussein@example.com",
+      "userPassword": "SaraHussein123",
       "id": "c224"
     },
     {
-      "id": "b108",
-      "userId": 20,
-      "userFirstName": "ss",
-      "userSecondName": "s",
-      "userEmail": "s",
-      "userPassword": "s"
+      "userId": 11,
+      "userFirstName": "Ali",
+      "userSecondName": "Khalid",
+      "userEmail": "ali.khalid@example.com",
+      "userPassword": "AliKhalid456",
+      "id": "b108"
     },
     {
-      "id": "37f6",
-      "userId": 2406,
-      "userFirstName": "d",
-      "userSecondName": "d",
-      "userEmail": "dd",
-      "userPassword": "aaaaa"
+      "userId": 12,
+      "userFirstName": "Noura",
+      "userSecondName": "Salem",
+      "userEmail": "noura.salem@example.com",
+      "userPassword": "NouraSalem789",
+      "id": "37f6"
     },
     {
-      "id": "0273",
-      "userId": 2639,
-      "userFirstName": "67",
-      "userSecondName": "456",
-      "userEmail": "5678",
-      "userPassword": "000"
+      "userId": 13,
+      "userFirstName": "Hassan",
+      "userSecondName": "Omar",
+      "userEmail": "hassan.omar@example.com",
+      "userPassword": "HassanOmar101",
+      "id": "0273"
     }
   ],
   "projects": [
     {
       "userId": 1,
       "projectId": "1",
-      "projectTitle": "Project One",
-      "projectDesc": "Description of Project One.",
+      "projectTitle": "E-commerce Platform",
+      "projectDesc": "Building a scalable e-commerce platform for online retailers.",
       "id": "a4db"
     },
     {
       "userId": 1,
       "projectId": "2",
-      "projectTitle": "Project Two",
-      "projectDesc": "Description of Project Two.",
+      "projectTitle": "CRM System",
+      "projectDesc": "Developing a customer relationship management system for small businesses.",
       "id": "54f7"
     },
     {
-      "userId": 2,
+      "userId": 1,
       "projectId": "3",
-      "projectTitle": "Project Three",
-      "projectDesc": "Description of Project Three.",
+      "projectTitle": "Social Media App",
+      "projectDesc": "Creating a social media application with real-time chat features.",
       "id": "6ebe"
     },
     {
-      "userId": 2,
+      "userId": 1,
       "projectId": "4",
-      "projectTitle": "Project Four",
-      "projectDesc": "Description of Project Four.",
+      "projectTitle": "Project Management Tool",
+      "projectDesc": "Designing a tool for managing projects and tasks within teams.",
       "id": "f7b1"
     },
     {
-      "userId": 3,
+      "userId": 1,
       "projectId": "5",
-      "projectTitle": "Project Five",
-      "projectDesc": "Description of Project Five.",
+      "projectTitle": "Financial Dashboard",
+      "projectDesc": "Building a dashboard to track financial metrics and KPIs.",
       "id": "4c2a"
     },
     {
-      "userId": 3,
+      "userId": 1,
       "projectId": "6",
-      "projectTitle": "Project Six",
-      "projectDesc": "Description of Project Six.",
+      "projectTitle": "Healthcare App",
+      "projectDesc": "Developing an app to manage patient records and appointments.",
       "id": "ab76"
     },
     {
-      "userId": 4,
+      "userId": 1,
       "projectId": "7",
-      "projectTitle": "Project Seven",
-      "projectDesc": "Description of Project Seven.",
+      "projectTitle": "Online Learning Platform",
+      "projectDesc": "Creating a platform for online courses and educational content.",
       "id": "0993"
     },
     {
-      "id": "70cf",
-      "userId": "2639",
-      "projectId": 101408,
-      "projectTitle": "project1",
-      "projectDesc": "hi, everyone, this is our project description"
+      "userId": 1,
+      "projectId": "8",
+      "projectTitle": "Travel Booking System",
+      "projectDesc": "Building a system for booking flights, hotels, and car rentals.",
+      "id": "70cf"
+    },
+    {
+      "userId": 1,
+      "projectId": "9",
+      "projectTitle": "Fitness Tracker App",
+      "projectDesc": "Developing an app to track workouts, nutrition, and health metrics.",
+      "id": "2bcc"
+    },
+    {
+      "userId": 1,
+      "projectId": "10",
+      "projectTitle": "Event Management System",
+      "projectDesc": "Designing a system to manage events, registrations, and attendees.",
+      "id": "6ff4"
+    },
+    {
+      "userId": 1,
+      "projectId": "11",
+      "projectTitle": "Real Estate Platform",
+      "projectDesc": "Creating a platform to list and manage real estate properties.",
+      "id": "e00d"
+    },
+    {
+      "userId": 1,
+      "projectId": "12",
+      "projectTitle": "Inventory Management System",
+      "projectDesc": "Building a system to manage inventory levels and track shipments.",
+      "id": "6ff5"
+    },
+    {
+      "userId": 1,
+      "projectId": "13",
+      "projectTitle": "Restaurant Reservation System",
+      "projectDesc": "Developing a system for managing restaurant reservations and seating.",
+      "id": "e00e"
     }
   ],
   "tasks": [
@@ -205,72 +240,476 @@
       "status": "todo"
     },
     {
-      "id": "360388",
-      "projectId": 187488,
-      "taskTitle": "task 3",
-      "taskDesc": "task 3 description\n\n",
-      "deadLine": "2024-07-18",
-      "status": "progress",
-      "history": "245k"
-    },
-    {
-      "id": "157571",
-      "projectId": 187488,
-      "taskTitle": "task 3 ",
-      "taskDesc": "task 3 description\n\n",
-      "deadLine": "2024-07-25",
-      "status": "completed",
-      "history": "qqqqqqqqqqqq"
-    },
-    {
-      "id": "999643",
-      "projectId": 187488,
-      "taskTitle": "task 3 ",
-      "taskDesc": "task 3 desc",
-      "deadLine": "2024-07-31",
-      "status": "completed",
-      "history": "245k"
-    },
-    {
-      "id": "539174",
-      "projectId": 187488,
-      "taskTitle": "task 88888888888888888",
-      "taskDesc": "task 99 desc",
-      "deadLine": "2024-08-01",
-      "status": "todo",
-      "history": "245k"
-    },
-    {
-      "id": "607076",
-      "projectId": "1",
-      "taskTitle": "task 2",
-      "taskDesc": "create css style",
-      "deadLine": "2024-07-02",
-      "status": "todo"
-    },
-    {
-      "id": "590957",
-      "projectId": 101408,
-      "taskTitle": "task1",
-      "taskDesc": "this is a to do task",
-      "deadLine": "2024-07-03",
-      "status": "todo"
-    },
-    {
-      "id": "313665",
-      "projectId": 101408,
-      "taskTitle": "task2",
-      "taskDesc": "this is in progress task",
-      "deadLine": "2024-07-03",
+      "id": "9",
+      "projectId": "8",
+      "taskTitle": "Integrate Payment Gateway",
+      "taskDesc": "Integrate a secure payment gateway for processing transactions.",
+      "deadLine": "2024-07-22",
       "status": "progress"
     },
     {
-      "id": "667347",
-      "projectId": 101408,
-      "taskTitle": "task3",
-      "taskDesc": "this is a done task",
-      "deadLine": "2024-07-03",
+      "id": "10",
+      "projectId": "9",
+      "taskTitle": "Build Workout Tracking Feature",
+      "taskDesc": "Develop a feature to track and log workouts.",
+      "deadLine": "2024-07-18",
+      "status": "todo"
+    },
+    {
+      "id": "11",
+      "projectId": "10",
+      "taskTitle": "Create Event Calendar",
+      "taskDesc": "Design and implement a calendar for managing event schedules.",
+      "deadLine": "2024-07-25",
+      "status": "progress"
+    },
+    {
+      "id": "12",
+      "projectId": "11",
+      "taskTitle": "Optimize Search Functionality",
+      "taskDesc": "Improve the search functionality for better property listings.",
+      "deadLine": "2024-08-01",
+      "status": "todo"
+    },
+    {
+      "id": "13",
+      "projectId": "12",
+      "taskTitle": "Setup Inventory Alerts",
+      "taskDesc": "Implement alerts for low inventory levels.",
+      "deadLine": "2024-07-30",
+      "status": "todo"
+    },
+    {
+      "id": "14",
+      "projectId": "13",
+      "taskTitle": "Create Reservation System",
+      "taskDesc": "Develop a system for handling table reservations and bookings.",
+      "deadLine": "2024-07-28",
+      "status": "progress"
+    },
+    {
+      "id": "15",
+      "projectId": "1",
+      "taskTitle": "Implement User Authentication",
+      "taskDesc": "Add user authentication and authorization features.",
+      "deadLine": "2024-07-12",
       "status": "completed"
+    },
+    {
+      "id": "16",
+      "projectId": "2",
+      "taskTitle": "Design UI/UX",
+      "taskDesc": "Design the user interface and user experience for the application.",
+      "deadLine": "2024-07-15",
+      "status": "todo"
+    },
+    {
+      "id": "16",
+      "projectId": "3",
+      "taskTitle": "Implement Real-Time Chat",
+      "taskDesc": "Integrate real-time chat functionality using WebSockets.",
+      "deadLine": "2024-07-20",
+      "status": "todo"
+    },
+    {
+      "id": "17",
+      "projectId": "4",
+      "taskTitle": "Design Task Management UI",
+      "taskDesc": "Create a user-friendly interface for managing tasks within projects.",
+      "deadLine": "2024-07-25",
+      "status": "progress"
+    },
+    {
+      "id": "18",
+      "projectId": "5",
+      "taskTitle": "Implement Dashboard Filters",
+      "taskDesc": "Add filters to the financial dashboard for better data analysis.",
+      "deadLine": "2024-07-30",
+      "status": "todo"
+    },
+    {
+      "id": "19",
+      "projectId": "6",
+      "taskTitle": "Develop Patient Appointment System",
+      "taskDesc": "Create a system for scheduling and managing patient appointments.",
+      "deadLine": "2024-07-18",
+      "status": "progress"
+    },
+    {
+      "id": "20",
+      "projectId": "7",
+      "taskTitle": "Implement Course Rating Feature",
+      "taskDesc": "Allow users to rate and review courses on the platform.",
+      "deadLine": "2024-07-22",
+      "status": "todo"
+    },
+    {
+      "id": "21",
+      "projectId": "8",
+      "taskTitle": "Design User Profile Page",
+      "taskDesc": "Create a visually appealing user profile page for travelers.",
+      "deadLine": "2024-07-28",
+      "status": "progress"
+    },
+    {
+      "id": "22",
+      "projectId": "9",
+      "taskTitle": "Integrate Health Metrics API",
+      "taskDesc": "Connect with an API to retrieve and display health metrics.",
+      "deadLine": "2024-08-01",
+      "status": "todo"
+    },
+    {
+      "id": "23",
+      "projectId": "10",
+      "taskTitle": "Optimize Event Registration Process",
+      "taskDesc": "Streamline the registration process for event attendees.",
+      "deadLine": "2024-08-05",
+      "status": "todo"
+    },
+    {
+      "id": "24",
+      "projectId": "11",
+      "taskTitle": "Enhance Property Listing UI",
+      "taskDesc": "Improve the user interface for browsing real estate properties.",
+      "deadLine": "2024-07-25",
+      "status": "progress"
+    },
+    {
+      "id": "25",
+      "projectId": "12",
+      "taskTitle": "Create Shipment Tracking Feature",
+      "taskDesc": "Develop a feature to track shipments and delivery status.",
+      "deadLine": "2024-07-30",
+      "status": "todo"
+    },
+    {
+      "id": "26",
+      "projectId": "1",
+      "taskTitle": "Implement Product Search Function",
+      "taskDesc": "Develop a search feature to find products on the e-commerce platform.",
+      "deadLine": "2024-08-05",
+      "status": "progress"
+    },
+    {
+      "id": "27",
+      "projectId": "2",
+      "taskTitle": "Integrate Email Campaign Module",
+      "taskDesc": "Connect with an email marketing service to manage campaigns.",
+      "deadLine": "2024-07-30",
+      "status": "todo"
+    },
+    {
+      "id": "28",
+      "projectId": "3",
+      "taskTitle": "Implement Image Upload Functionality",
+      "taskDesc": "Enable users to upload images to posts and chat messages.",
+      "deadLine": "2024-08-01",
+      "status": "progress"
+    },
+    {
+      "id": "29",
+      "projectId": "4",
+      "taskTitle": "Create Task Progress Tracking",
+      "taskDesc": "Add functionality to track the progress of individual tasks.",
+      "deadLine": "2024-08-05",
+      "status": "todo"
+    },
+    {
+      "id": "30",
+      "projectId": "5",
+      "taskTitle": "Design KPI Dashboard",
+      "taskDesc": "Design a dashboard to display key performance indicators (KPIs).",
+      "deadLine": "2024-07-25",
+      "status": "progress"
+    },
+    {
+      "id": "31",
+      "projectId": "6",
+      "taskTitle": "Implement Prescription Management",
+      "taskDesc": "Develop a feature for doctors to manage patient prescriptions.",
+      "deadLine": "2024-08-10",
+      "status": "todo"
+    },
+    {
+      "id": "32",
+      "projectId": "7",
+      "taskTitle": "Create Quiz Module",
+      "taskDesc": "Develop a quiz feature for interactive learning experiences.",
+      "deadLine": "2024-08-01",
+      "status": "progress"
+    },
+    {
+      "id": "33",
+      "projectId": "8",
+      "taskTitle": "Implement Car Rental Booking",
+      "taskDesc": "Enable users to book rental cars through the travel booking system.",
+      "deadLine": "2024-08-05",
+      "status": "todo"
+    },
+    {
+      "id": "34",
+      "projectId": "9",
+      "taskTitle": "Enhance Nutrition Tracking",
+      "taskDesc": "Add features to track calorie intake and nutrition details.",
+      "deadLine": "2024-07-30",
+      "status": "progress"
+    },
+    {
+      "id": "35",
+      "projectId": "10",
+      "taskTitle": "Develop Event Feedback System",
+      "taskDesc": "Create a feedback system to collect attendee opinions after events.",
+      "deadLine": "2024-08-10",
+      "status": "todo"
+    },
+    {
+      "id": "36",
+      "projectId": "11",
+      "taskTitle": "Integrate Virtual Tour Feature",
+      "taskDesc": "Add virtual tour functionality for viewing real estate properties.",
+      "deadLine": "2024-08-05",
+      "status": "progress"
+    },
+    {
+      "id": "37",
+      "projectId": "12",
+      "taskTitle": "Optimize Inventory Reporting",
+      "taskDesc": "Improve reporting capabilities for inventory management.",
+      "deadLine": "2024-07-25",
+      "status": "todo"
+    },
+    {
+      "id": "38",
+      "projectId": "13",
+      "taskTitle": "Implement Waitlist Feature",
+      "taskDesc": "Develop a feature to manage waitlists for restaurant reservations.",
+      "deadLine": "2024-08-01",
+      "status": "progress"
+    },
+    {
+      "id": "39",
+      "projectId": "1",
+      "taskTitle": "Enhance User Account Security",
+      "taskDesc": "Implement additional security measures for user accounts.",
+      "deadLine": "2024-08-10",
+      "status": "todo"
+    },
+    {
+      "id": "40",
+      "projectId": "2",
+      "taskTitle": "Design Customer Dashboard",
+      "taskDesc": "Create a dashboard for customers to manage their interactions.",
+      "deadLine": "2024-08-05",
+      "status": "progress"
+    },
+    {
+      "id": "41",
+      "projectId": "3",
+      "taskTitle": "Create Notification System",
+      "taskDesc": "Develop a notification system to alert users of new messages and updates.",
+      "deadLine": "2024-07-30",
+      "status": "todo"
+    },
+    {
+      "id": "42",
+      "projectId": "4",
+      "taskTitle": "Optimize Database Queries",
+      "taskDesc": "Improve database performance by optimizing SQL queries.",
+      "deadLine": "2024-08-01",
+      "status": "progress"
+    },
+    {
+      "id": "43",
+      "projectId": "5",
+      "taskTitle": "Implement Sales Forecasting",
+      "taskDesc": "Integrate algorithms to forecast sales based on historical data.",
+      "deadLine": "2024-08-10",
+      "status": "todo"
+    },
+    {
+      "id": "44",
+      "projectId": "6",
+      "taskTitle": "Design Appointment Reminder System",
+      "taskDesc": "Create a system to remind patients of upcoming appointments.",
+      "deadLine": "2024-08-05",
+      "status": "progress"
+    },
+    {
+      "id": "45",
+      "projectId": "7",
+      "taskTitle": "Integrate Video Lectures",
+      "taskDesc": "Enable video lectures as part of the online learning platform.",
+      "deadLine": "2024-08-01",
+      "status": "todo"
+    },
+    {
+      "id": "46",
+      "projectId": "8",
+      "taskTitle": "Implement Reviews for Booking Services",
+      "taskDesc": "Allow users to leave reviews for booked travel services.",
+      "deadLine": "2024-08-10",
+      "status": "completed"
+    },
+    {
+      "id": "47",
+      "projectId": "9",
+      "taskTitle": "Enhance Workout Logging",
+      "taskDesc": "Improve logging features for tracking workout progress.",
+      "deadLine": "2024-07-30",
+      "status": "todo"
+    },
+    {
+      "id": "48",
+      "projectId": "10",
+      "taskTitle": "Create Speaker Schedule Module",
+      "taskDesc": "Develop a module to manage speaker schedules for events.",
+      "deadLine": "2024-08-01",
+      "status": "progress"
+    },
+    {
+      "id": "49",
+      "projectId": "11",
+      "taskTitle": "Optimize Property Comparison Tool",
+      "taskDesc": "Improve the tool for comparing different real estate properties.",
+      "deadLine": "2024-08-05",
+      "status": "todo"
+    },
+    {
+      "id": "50",
+      "projectId": "12",
+      "taskTitle": "Implement Supplier Management",
+      "taskDesc": "Create features for managing suppliers and vendor relationships.",
+      "deadLine": "2024-08-10",
+      "status": "progress"
+    },
+    {
+      "id": "51",
+      "projectId": "13",
+      "taskTitle": "Enhance Table Reservation System",
+      "taskDesc": "Add features for managing table preferences and special requests.",
+      "deadLine": "2024-08-01",
+      "status": "todo"
+    },
+    {
+      "id": "52",
+      "projectId": "1",
+      "taskTitle": "Implement Wishlist Feature",
+      "taskDesc": "Allow users to create and manage wishlists of products.",
+      "deadLine": "2024-08-05",
+      "status": "progress"
+    },
+    {
+      "id": "53",
+      "projectId": "2",
+      "taskTitle": "Design Support Ticket System",
+      "taskDesc": "Create a system for customers to submit and track support tickets.",
+      "deadLine": "2024-08-10",
+      "status": "todo"
+    },
+    {
+      "id": "54",
+      "projectId": "3",
+      "taskTitle": "Enhance Profile Settings",
+      "taskDesc": "Add more options and preferences to user profile settings.",
+      "deadLine": "2024-08-01",
+      "status": "progress"
+    },
+    {
+      "id": "55",
+      "projectId": "4",
+      "taskTitle": "Create Team Collaboration Tools",
+      "taskDesc": "Develop tools to facilitate collaboration among project team members.",
+      "deadLine": "2024-08-05",
+      "status": "todo"
+    },
+    {
+      "id": "56",
+      "projectId": "5",
+      "taskTitle": "Implement Cost Analysis Feature",
+      "taskDesc": "Add tools to analyze and manage costs within the financial dashboard.",
+      "deadLine": "2024-08-10",
+      "status": "progress"
+    },
+    {
+      "id": "57",
+      "projectId": "6",
+      "taskTitle": "Integrate Electronic Health Records",
+      "taskDesc": "Connect with systems to access and manage electronic health records.",
+      "deadLine": "2024-08-01",
+      "status": "todo"
+    },
+    {
+      "id": "58",
+      "projectId": "7",
+      "taskTitle": "Enhance Course Enrollment Process",
+      "taskDesc": "Optimize the process for users to enroll in courses on the platform.",
+      "deadLine": "2024-08-05",
+      "status": "progress"
+    },
+    {
+      "id": "59",
+      "projectId": "8",
+      "taskTitle": "Implement Multi-Language Support",
+      "taskDesc": "Add support for multiple languages in the travel booking system.",
+      "deadLine": "2024-08-10",
+      "status": "todo"
+    },
+    {
+      "id": "60",
+      "projectId": "9",
+      "taskTitle": "Design Health Metric Dashboard",
+      "taskDesc": "Create a dashboard to display and analyze health metrics over time.",
+      "deadLine": "2024-08-01",
+      "status": "progress"
+    },
+    {
+      "id": "61",
+      "projectId": "10",
+      "taskTitle": "Implement Sponsorship Management",
+      "taskDesc": "Develop features to manage sponsorships and partnerships for events.",
+      "deadLine": "2024-08-05",
+      "status": "todo"
+    },
+    {
+      "id": "62",
+      "projectId": "11",
+      "taskTitle": "Enhance Property Detail Pages",
+      "taskDesc": "Improve the layout and information displayed on property detail pages.",
+      "deadLine": "2024-08-10",
+      "status": "progress"
+    },
+    {
+      "id": "63",
+      "projectId": "12",
+      "taskTitle": "Implement Barcode Scanning",
+      "taskDesc": "Add barcode scanning functionality for inventory management.",
+      "deadLine": "2024-08-01",
+      "status": "todo"
+    },
+    {
+      "id": "64",
+      "projectId": "13",
+      "taskTitle": "Enhance Reservation Confirmation Emails",
+      "taskDesc": "Improve the content and design of reservation confirmation emails.",
+      "deadLine": "2024-08-05",
+      "status": "completed"
+    },
+    {
+      "id": "65",
+      "projectId": "1",
+      "taskTitle": "Integrate Social Media Sharing",
+      "taskDesc": "Allow users to share product details on social media platforms.",
+      "deadLine": "2024-08-10",
+      "status": "todo"
+    },
+    {
+      "id": "569600",
+      "projectId": "13",
+      "taskTitle": "Enhance Reservation Confirmation Emails",
+      "taskDesc": "Improve the content and design of reservation confirmation emails.\n\n",
+      "deadLine": "2024-07-18",
+      "status": "progress"
     }
   ]
 }

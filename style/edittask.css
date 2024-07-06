@@ -21,36 +21,27 @@ body {
     flex-direction: column;
 }
 
-.form-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
 
-.task-title {
-    flex: 1;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 10px;
-    margin-right: 10px;
-}
-
-.close-btn {
+/* .close-btn {
     border: none;
     background: none;
     font-size: 20px;
     cursor: pointer;
-}
+} */
 
 .task-desc {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 10px;
-    margin-bottom: 10px;
-    resize: none;
-}
+   
+    width: 100%;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #ce0909;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid #ed500d;
+    outline: none;
 
+
+}
 .task-date {
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -59,21 +50,27 @@ body {
 }
 
 .task-status {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: #e9e9e9;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #ce0909;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid #ed500d;
+    outline: none;
 }
 
 .edit-btn {
-    background-color: #ff5722;
-    color: #fff;
+    background-color:rgba(255, 65, 109, 0.751);
+    color: #0b0909;
     border: none;
     border-radius: 4px;
     padding: 10px;
     cursor: pointer;
     margin-top: 10px;
+    font-size: 16px;
+    font-weight: 700; 
+    color:  rgb(0, 0, 0);
 }
 
 .add-btn:hover {
@@ -82,8 +79,16 @@ body {
 
 
 select {
-    width: 600px;
-    height: 35px;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 14px;
+    color: white;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid #ed500d;
+    outline: none;
+    background-color: rgba(255, 65, 109, 0.751);
+    border-radius: 7px;
 
 }
 
@@ -112,7 +117,7 @@ h3 {
 
 header {
     margin: 0;
-    padding: 0;
+    padding: 10px;
 
 }
 
@@ -121,4 +126,37 @@ option {
     font-size: 20px;
     padding: 40px;
     margin: 70px;
+}
+  .form-header input {
+    width: 100%;
+  padding: 10px 0;
+  font-size: 14px;
+  color: #ce0909;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid #ed500d;
+  outline: none;
+  
+  }
+ 
+  .form-header{
+    display: flex;
+    flex-direction: column;
+    align-items: first baseline;
+  }
+  label{
+    font-size: 17px;
+    font-weight: 1000; 
+    color:  rgb(0, 0, 0);
+
+}
+select{
+    font-size: 11px;
+    font-weight: 900; 
+    color:  rgb(0, 0, 0);
+}
+.task-date{
+    font-size: 15px;
+    font-weight: 700; 
+    color:  rgb(0, 0, 0);
 }

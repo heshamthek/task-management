@@ -11,7 +11,8 @@ const closeTaskBtn = document.querySelector(".close-modal-btn");
 
 showTaskBtn.addEventListener("click", () => {
     openTaskModal();
-    document.getElementById("project-modal").style.visibility="hidden";
+    document.getElementById("project-modal").style.visibility = "hidden";
+    document.getElementById("project-modal").style.display = "none";
 });
 
 closeTaskBtn.addEventListener("click", () => {
@@ -23,12 +24,12 @@ maskTaskModal.addEventListener("click", () => {
 });
 
 function openTaskModal() {
-    maskTaskModal.style.display = "block";
+    maskTaskModal.classList.add("active");
     taskModal.classList.add("active");
 }
 
 function closeTaskModal() {
-    maskTaskModal.style.display = "none";
+    maskTaskModal.classList.remove("active");
     taskModal.classList.remove("active");
 }
 
@@ -39,10 +40,7 @@ const projectModal = document.querySelector(".project-modal");
 const closeProjectBtn = document.querySelector(".close-project-modal-btn");
 
 showProjectBtn.addEventListener("click", () => {
-   
-
     openProjectModal();
-    
 });
 
 closeProjectBtn.addEventListener("click", () => {
@@ -54,19 +52,27 @@ maskProjectModal.addEventListener("click", () => {
 });
 
 function openProjectModal() {
-    document.getElementById("project-modal").style.visibility="visible";
-    maskProjectModal.style.display = "block";
+    maskProjectModal.classList.add("active");
     projectModal.classList.add("active");
 }
 
 function closeProjectModal() {
-    maskProjectModal.style.display = "none";
+    maskProjectModal.classList.remove("active");
     projectModal.classList.remove("active");
 }
+
+
 // -------------------------------------------------------------------------------
 let globalProjectId;
+let globalProjectArr;
+
 // Fetch projects on page load
 document.addEventListener("DOMContentLoaded", async () => {
+    await fetchProject();
+    // await getTasksByProjectId({ projectId: globalProjectArr[0].projectId });
+});
+
+async function fetchProject() {
     const userId = getUrlParameter('userId');
     console.log('User ID from URL:', userId);
 
@@ -76,7 +82,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     };
 
     const url = `http://localhost:3000/projects?userId=${userId}`;
-    // window.location.href = url;
 
     try {   
         const response = await fetch(url, {
@@ -88,17 +93,21 @@ document.addEventListener("DOMContentLoaded", async () => {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
-        const projects = await response.json(); // assuming response is JSON
+        const projects = await response.json();
+        globalProjectArr = projects;
 
         // Clear existing content
         document.getElementById("projec-list").innerHTML = '';
 
         // Append project titles to the project list
+        let projectHtml =`<p class="project-title" data-project-id="${projects[0].projectId}">${projects[0].projectTitle}</p>`;
         projects.forEach(project => {
-            const projectHtml = `
+            projectHtml = `
                 <div class="project-content">
-                    <p class="project-title" data-project-id="${project.projectId}">${project.projectTitle}</p> 
-                    <p class="project-desc">${project.projectDesc}</p> 
+                    <p class="project-title" data-project-id="${project.projectId}">${project.projectTitle}</p>
+                     <span class="material-symbols-outlined delete" data-project-id="${project.id}" onclick="deleteProject('${project.id}')"> 
+                delete
+            </span> 
                 </div>`;
             document.getElementById("projec-list").innerHTML += projectHtml;
         });
@@ -106,7 +115,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         // Add click event listeners for project titles
         document.querySelectorAll(".project-content").forEach(element => {
             element.addEventListener("click", async (event) => {
-
                 const projectId = event.target.getAttribute("data-project-id");
                 const project = projects.find(p => p.projectId == projectId);
                 globalProjectId = project.projectId;
@@ -115,12 +123,34 @@ document.addEventListener("DOMContentLoaded", async () => {
                 document.getElementById("project-desc").innerText = project.projectDesc;
             });
         });
+        // ----------fetch data in dash board -----------------------
+        let cardProjectContainer = document.getElementById("project-card-container");
+        projects.forEach(project =>{
+            cardProjectContainer.innerHTML += ` <div class="card">
+              <a href="#" class="card-link">
+                <div class="card-bg"></div>
+          
+                <div class="card-title">
+                    ${project.projectTitle}
+                </div>
+                <p class="desc">${project.projectDesc}</p>
+          
+                <div class="card-date-box">
+                  Start:
+                  <span class="card-date">
+                    04.11.2022
+                  </span>
+                </div>
+              </a>
+            </div>`
+        })
+
 
         console.log('Data received:', projects);
     } catch (error) {
         console.error('Fetch projects error:', error);
     }
-});
+}
 
 // Function to get URL parameters
 function getUrlParameter(name) {
@@ -145,7 +175,7 @@ async function getTasksByProjectId(project) {
             throw new Error(`HTTP error! Status: ${tasksResponse.status}`);
         }
 
-        const tasksData = await tasksResponse.json(); // assuming tasks response is JSON
+        const tasksData = await tasksResponse.json();
         let todoNum = 0;
         let progressNum = 0;
         let completedNum = 0;
@@ -154,6 +184,8 @@ async function getTasksByProjectId(project) {
         document.getElementById("to-do").innerHTML = '';
         document.getElementById("progress").innerHTML = '';
         document.getElementById("completed").innerHTML = '';
+        // document.getElementById("project-card-container").style.visibility="hidden";
+        document.getElementById("project-card-container").style.display="none";
 
         // Populate tasks for the corresponding status
         tasksData.forEach(task => {
@@ -163,7 +195,7 @@ async function getTasksByProjectId(project) {
             if (task.status === "progress") {
                 statusColor = "rgba(77, 77, 240, 0.714)";
             } else if (task.status === "todo") {
-                statusColor = "rgba(255, 255, 0, 0.752)";
+                statusColor = "#FF4B2B";
             } else if (task.status === "completed") {
                 statusColor = "rgba(0, 128, 0, 0.752)";
             }
@@ -175,10 +207,10 @@ async function getTasksByProjectId(project) {
                             ${task.taskTitle}
                         </p>
                         <div class="edit-del">
-                            <span class="material-symbols-outlined delete" id="projec-list" onclick="deleteTask(${task.id})"> 
+                            <span class="material-symbols-outlined delete" id="projec-list" onclick="deleteAlert(${task.id})"> 
                                 delete
                             </span>
-                            <span class="material-symbols-outlined more" id="go-to-editpage"onclick="goToEditPage(${task.id})">
+                            <span class="material-symbols-outlined more" id="go-to-editpage" onclick="goToEditPage(${task.id})">
                                 more_vert
                             </span>
                         </div>
@@ -197,18 +229,14 @@ async function getTasksByProjectId(project) {
             if (task.status === "progress") {
                 document.getElementById("progress").innerHTML += taskHtml;
                 progressNum++;
-                // document.getElementById("status-p").style.backgroundColor = " rgba(77, 77, 240, 0.714)";
             } else if (task.status === "todo") {
                 document.getElementById("to-do").innerHTML += taskHtml;
                 todoNum++;
-                // document.getElementById("status-p").style.backgroundColor = "rgba(255, 255, 0, 0.752)";
             } else if (task.status === "completed") {
                 document.getElementById("completed").innerHTML += taskHtml;
                 completedNum++;
-                // document.getElementById("status-p").style.backgroundColor = "rgba(255, 255, 0, 0.752);";
             }
         });
-
 
         // Update the task counts
         document.getElementById("to-do").insertAdjacentHTML('afterbegin', `<p>TODO <span>${todoNum}</span></p>`);
@@ -220,6 +248,58 @@ async function getTasksByProjectId(project) {
         console.error('Fetch tasks error:', error);
     }
 }
+ function deleteAlert(taskId){
+    Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it!"
+      }).then((result) => {
+        if (result.isConfirmed) {
+             deleteTask(taskId);
+          Swal.fire({
+            title: "Deleted!",
+            text: "Your file has been deleted.",
+            icon: "success"
+          });
+        }
+      });
+}
+async function deleteProject(id) {
+    console.log(`Deleting project with ID: ${id}`);
+    const url = `http://localhost:3000/projects/${id}`; 
+    console.log(`DELETE request to URL: ${url}`);
+
+    try {
+        const headersList = { 
+            "Accept": "*/*", 
+            "User-Agent": "Thunder Client (https://www.thunderclient.com/)"
+        };
+
+        const response = await fetch(url, {
+            method: "DELETE",
+            headers: headersList
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`); // Backticks for string interpolation
+        }
+
+        console.log(`Project with ID ${id} deleted successfully.`);
+        
+    } catch (error) {
+        console.error('Delete project error:', error);
+    }
+}
+
+
+
+
+
+
 
 // Function to delete a task by ID
 async function deleteTask(taskId) {
@@ -240,14 +320,12 @@ async function deleteTask(taskId) {
 
         const data = await response.text();
         console.log("Delete response:", data);
+        await getTasksByProjectId({ projectId: globalProjectId });
 
-        
     } catch (error) {
         console.error('Delete task error:', error);
     }
 }
-
-
 
 function generateRandomId() {
     return Math.floor(Math.random() * 1000000);
@@ -275,7 +353,7 @@ async function addproject() {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
 
-        window.location.replace("/index.html");
+        // window.location.replace("/index.html");
     } catch (error) {
         console.error("There was an error!", error);
     }
@@ -294,9 +372,9 @@ function getValue() {
 
     return selectedValue;
 }
+
 async function addNewTask() {
-    // e.preventDefault();
-    let taskId = generateRandomId().toString()
+    let taskId = generateRandomId().toString();
     let projectId = globalProjectId;
     let taskTitle = document.getElementById("task-title").value;
     let taskDesc = document.getElementById("task-description").value;
@@ -307,7 +385,7 @@ async function addNewTask() {
         "Accept": "*/*",
         "User-Agent": "Thunder Client (https://www.thunderclient.com)",
         "Content-Type": "application/json"
-    }
+    };
 
     let bodyContent = JSON.stringify({
         "id": taskId,
@@ -325,31 +403,26 @@ async function addNewTask() {
     });
 
     let tasks = await response.json();
-    console.log(data);
-
+    console.log(tasks);
+    await getTasksByProjectId({ projectId: globalProjectId });
 }
-document.getElementById("task-add-btn").addEventListener("click", async () => {
 
+document.getElementById("task-add-btn").addEventListener("click", async () => {
     console.log(globalProjectId);
     await addNewTask();
-})
-
-
+});
 
 // ------logout button--------------------
 
-    document.getElementById("logout-btn").addEventListener("click" , ()=>{
-        window.location.href = "homepage.html";
-        localStorage.setItem("login" , "false");
-    })
-
+document.getElementById("logout-btn").addEventListener("click", () => {
+    window.location.href = "homepage.html";
+    localStorage.setItem("login", "false");
+});
 
 function goToEditPage(taskid) {
     console.log(taskid);
     window.location.href = `edittask.html?taskId=${taskid}`;
 }
-
-
 
 document.addEventListener("DOMContentLoaded", function() {
     function filterTasks() {

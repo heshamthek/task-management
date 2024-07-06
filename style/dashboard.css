@@ -29,14 +29,14 @@
   }
 /* Rectangle 26 */
 
-position: absolute;
+/* position: absolute;
 width: 281px;
 height: 703px;
 left: 22px;
 top: 129px;
 
 background: linear-gradient(270deg, #FF416C 0%, #FF4B2B 100%);
-border-radius: 26px;
+border-radius: 26px; */
 
 
 
@@ -63,8 +63,7 @@ body {
     top: 0;
     z-index: 1000;
     height: 56px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 0 0 10px 10px;
+  
     
     }
 
@@ -115,13 +114,13 @@ body {
     position: fixed;
     top: 56px;
     left: 0;
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
     transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    border-radius: 26px;
-    margin: 20px 0;
+    /* border-radius: 26px; */
+    /* margin: 20px 0; */
 
 }
 
@@ -222,11 +221,13 @@ body {
 .status_task_card {
     flex: 1;
     flex-wrap: wrap;
+    align-items: center;
     padding: 25px;
 }
 .card-head{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
 }.edit-del{
     margin-top: 14px;
@@ -274,6 +275,7 @@ body {
 
 .tasks .desc {
     font-weight: lighter;
+    padding: 24px 10px;
 }
 
 .tasks .status_data {
@@ -415,13 +417,13 @@ body {
 
 .close-modal-btn {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 1px;
+    right: 1px;
     background-color: transparent;
     border: none;
     cursor: pointer;
     color: #FF4B2B;
-    font-size: 24px;
+    font-size: 20px;
     padding: 5px;
 }
 
@@ -508,14 +510,16 @@ body {
 
 .close-project-modal-btn {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 0px;
+    right: 0px;
     background-color: transparent;
     border: none;
     cursor: pointer;
     color: #FF4B2B;
-    font-size: 24px;
-    padding: 5px;
+    font-size: 20px;
+    padding: 5px;   
+   
+    
 }
 
 .close-project-modal-btn:hover {
@@ -637,8 +641,170 @@ body {
 }
 ::-webkit-scrollbar-thumb {
     background: var(--gradientY);
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 ::-webkit-scrollbar-thumb:hover {
     background-color: #75a5a8;
 }  
+
+
+  
+  .project-card-container {
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    width: 75vw;
+    margin: 0 auto;
+    padding: 50px 0;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin: 0 15px 30px;
+    overflow: hidden;
+    border-radius: 28px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+.card:hover{
+    color: white;
+}
+  .card-link {
+    display: block;
+    padding: 30px 20px;
+    position: relative;
+    text-decoration: none;
+    color: #333333;
+  }
+  
+  .card-link:hover,
+  .card-link:hover .card-date {
+    color: #f6f5f5;
+  }
+  
+  .card-link:hover .card-bg {
+    transform: scale(10);
+  }
+  
+  .card-title {
+    /* min-height: 87px; */
+    margin: 0 0 25px;
+    overflow: hidden;
+    font-weight: bold;
+    font-size: 30px;
+    color: #333333;
+    z-index: 2;
+    position: relative;
+  }
+  .card .desc {
+    top: 0px;
+    font-size: 15px;
+    margin: 15px;
+  }
+  
+  .card-date-box {
+    font-size: 18px;
+    color: #333333;
+    z-index: 2;
+    position: relative;
+  }
+  
+  .card-date {
+    font-weight: bold;
+    color: #ff8c00;
+    transition: color .5s ease;
+  }
+  
+  .card-bg {
+    height: 128px;
+    width: 128px;
+    background-color: #ff8c00;
+    z-index: 1;
+    position: absolute;
+    top: -75px;
+    right: -75px;
+    border-radius: 50%;
+    transition: all .5s ease;
+  }
+  
+  /* Adjust background color for different cards */
+  .card:nth-child(2n) .card-bg {
+    background-color: #3ecd5e;
+  }
+  
+  .card:nth-child(3n) .card-bg {
+    background-color: #e44002;
+  }
+  
+  .card:nth-child(4n) .card-bg {
+    background-color: #952aff;
+  }
+  
+  .card:nth-child(5n) .card-bg {
+    background-color: #cd3e94;
+  }
+  
+  .card:nth-child(6n) .card-bg {
+    background-color: #4c49ea;
+  }
+  
+  /* Responsive Design */
+  @media only screen and (max-width: 979px) {
+    .card {
+      flex-basis: calc(50% - 30px);
+    }
+    .card-title {
+      font-size: 24px;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .project-card-container {
+      width: 96%;
+    }
+  }
+  
+  @media only screen and (max-width: 639px) {
+    .card {
+      flex-basis: 100%;
+    }
+    .card-title {
+      min-height: 72px;
+      line-height: 1;
+      font-size: 24px;
+    }
+    .card-link {
+      padding: 22px 40px;
+    }
+    .card-date-box {
+      font-size: 16px;
+    }
+  }
+  /* Add these styles to your CSS file */
+.modal, .project-modal {
+    visibility: hidden;
+    display: none;
+}
+
+.modal.active, .project-modal.active {
+    visibility: visible;
+    display: block;
+}
+
+.modal-mask, .project-modal-mask {
+    display: none;
+}
+
+.modal-mask.active, .project-modal-mask.active {
+    display: block;
+    visibility: visible;
+}
+.project-content{
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+  

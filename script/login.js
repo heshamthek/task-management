@@ -20,13 +20,46 @@ async function signUp() {
     let userPassSignUp = document.getElementById("userPassSignUp").value;
     let userLastNameSignUp = document.getElementById("userLastNameSignUp").value;
 
-    if (!userNameSignUp || !userEmailSignUp || !userPassSignUp) {
-        alert("All fields are required.");
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+
+    document.getElementById("userNameSignUpError").innerText = "";
+    document.getElementById("userLastNameSignUpError").innerText = "";
+    document.getElementById("userEmailSignUpError").innerText = "";
+    document.getElementById("userPassSignUpError").innerText = "";
+    document.getElementById("signUpSuccess").innerText = "";
+
+    if (!userNameSignUp) {
+        document.getElementById("userNameSignUpError").innerText = "First name is required.";
+        return;
+    }
+
+    if (!userLastNameSignUp) {
+        document.getElementById("userLastNameSignUpError").innerText = "Last name is required.";
+        return;
+    }
+
+    if (!userEmailSignUp) {
+        document.getElementById("userEmailSignUpError").innerText = "Email is required.";
+        return;
+    }
+
+    if (!emailPattern.test(userEmailSignUp)) {
+        document.getElementById("userEmailSignUpError").innerText = "Please enter a valid email address.";
+        return;
+    }
+
+    if (!userPassSignUp) {
+        document.getElementById("userPassSignUpError").innerText = "Password is required.";
+        return;
+    }
+
+    if (!passwordPattern.test(userPassSignUp)) {
+        document.getElementById("userPassSignUpError").innerText = "Password must be at least 8 characters long and contain at least one letter and one number.";
         return;
     }
 
     let userId = Math.floor(Math.random() * 10000);
-
     let headersList = {
         "Accept": "*/*",
         "User-Agent": "Thunder Client (https://www.thunderclient.com)",
@@ -54,10 +87,10 @@ async function signUp() {
 
         let data = await response.text();
         console.log(data);
-        alert("Sign-up successful!");
+        document.getElementById("signUpSuccess").innerText = "Sign-up successful!";
     } catch (error) {
         console.error('Error:', error);
-        alert("Sign-up failed. Please try again later.");
+        document.getElementById("signUpSuccess").innerText = "Sign-up failed. Please try again later.";
     }
 }
 
@@ -71,8 +104,30 @@ async function signIn() {
     let userEmailSignIn = document.getElementById("userEmailSignIn").value;
     let userPassSignIn = document.getElementById("userPassSignIn").value;
 
-    if (!userEmailSignIn || !userPassSignIn) {
-        alert("Both fields are required.");
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+
+    document.getElementById("userEmailSignInError").innerText = "";
+    document.getElementById("userPassSignInError").innerText = "";
+    document.getElementById("signInSuccess").innerText = "";
+
+    if (!userEmailSignIn) {
+        document.getElementById("userEmailSignInError").innerText = "Email is required.";
+        return;
+    }
+
+    if (!emailPattern.test(userEmailSignIn)) {
+        document.getElementById("userEmailSignInError").innerText = "Please enter a valid email address.";
+        return;
+    }
+
+    if (!userPassSignIn) {
+        document.getElementById("userPassSignInError").innerText = "Password is required.";
+        return;
+    }
+
+    if (!passwordPattern.test(userPassSignIn)) {
+        document.getElementById("userPassSignInError").innerText = "Password must be at least 8 characters long and contain at least one letter and one number.";
         return;
     }
 
@@ -108,11 +163,11 @@ async function signIn() {
 
         } else {
             console.log("Invalid username or password.");
-            alert("Invalid username or password.");
+            document.getElementById("userEmailSignInError").innerText = "Invalid username or password.";
         }
     } catch (error) {
         console.error('Error:', error);
-        alert("Sign-in failed. Please try again later.");
+        document.getElementById("userEmailSignInError").innerText = "Sign-in failed. Please try again later.";
     }
 }
 
@@ -142,3 +197,4 @@ toggleButtonsVisibility();
 
 // Event listener for window resize to adjust button visibility
 window.addEventListener("resize", toggleButtonsVisibility);
+
