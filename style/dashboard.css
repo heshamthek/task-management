@@ -307,6 +307,7 @@ body {
 /* Button styles */
 
 .add-task-btn {
+   z-index: 10;
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -355,7 +356,7 @@ body {
     background-color: #fdfffe;
     width: 400px;
     max-width: 90%;
-    padding: 20px;
+    padding: 25px;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     opacity: 0;
@@ -383,7 +384,9 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
+    border: rgb(255, 75, 43)1px solid;
 }
+
 
 .modal-content textarea {
     min-height: 80px;
@@ -395,10 +398,11 @@ body {
     -webkit-appearance: none;
     -moz-appearance: none;
     padding: 10px;
-    background-color: #fff;
+    background-color:rgb(252, 16, 8);
     border: 1px solid #ccc;
+    color: white;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 17px;
 }
 
 .modal-content .add-btn {
@@ -424,7 +428,7 @@ body {
     cursor: pointer;
     color: #FF4B2B;
     font-size: 20px;
-    padding: 5px;
+    padding: 7px;
 }
 
 .close-modal-btn:hover {
@@ -461,7 +465,7 @@ body {
     background-color: #fdfffe;
     width: 400px;
     max-width: 90%;
-    padding: 20px;
+    padding: 25px;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     opacity: 0;
@@ -479,6 +483,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+   
+
 }
 
 .project-modal-content input[type="text"],
@@ -487,6 +493,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
+    border: rgb(255, 75, 43)1px solid;
 }
 
 .project-modal-content textarea {
@@ -517,7 +524,7 @@ body {
     cursor: pointer;
     color: #FF4B2B;
     font-size: 20px;
-    padding: 5px;   
+    padding: 7px;   
    
     
 }
@@ -583,6 +590,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
+    
 }
 
 .edit-task-modal-content textarea {

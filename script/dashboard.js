@@ -105,7 +105,7 @@ async function fetchProject() {
             projectHtml = `
                 <div class="project-content">
                     <p class="project-title" data-project-id="${project.projectId}">${project.projectTitle}</p>
-                     <span class="material-symbols-outlined delete" data-project-id="${project.id}" onclick="deleteProject('${project.id}')"> 
+                     <span class="material-symbols-outlined delete" data-project-id="${project.id}" onclick="deletee('${project.id}')"> 
                 delete
             </span> 
                 </div>`;
@@ -248,7 +248,59 @@ async function getTasksByProjectId(project) {
         console.error('Fetch tasks error:', error);
     }
 }
- function deleteAlert(taskId){
+
+
+
+function deletee(id){
+    Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it!"
+      }).then((result) => {
+        if (result.isConfirmed) {
+            deleteProject(id);
+          Swal.fire({
+            title: "Deleted!",
+            text: "Your file has been deleted.",
+            icon: "success"
+          });
+        }
+      });
+}
+ 
+async function deleteProject(id) {
+    const url = `http://localhost:3000/projects/${id}`; 
+    console.log(`DELETE request to URL: ${url}`);
+
+    try {
+        const headersList = { 
+            "Accept": "*/*", 
+            "User-Agent": "Thunder Client (https://www.thunderclient.com/)"
+        };
+
+        const response = await fetch(url, {
+            method: "DELETE",
+            headers: headersList
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`); 
+        }
+        
+        console.log(`Project with ID ${id} deleted successfully.`);
+        
+    } catch (error) {
+        console.error('Delete project error:', error);
+    }
+}
+
+
+
+function deleteAlert(taskId){
     Swal.fire({
         title: "Are you sure?",
         text: "You won't be able to revert this!",
@@ -268,39 +320,6 @@ async function getTasksByProjectId(project) {
         }
       });
 }
-async function deleteProject(id) {
-    console.log(`Deleting project with ID: ${id}`);
-    const url = `http://localhost:3000/projects/${id}`; 
-    console.log(`DELETE request to URL: ${url}`);
-
-    try {
-        const headersList = { 
-            "Accept": "*/*", 
-            "User-Agent": "Thunder Client (https://www.thunderclient.com/)"
-        };
-
-        const response = await fetch(url, {
-            method: "DELETE",
-            headers: headersList
-        });
-
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`); // Backticks for string interpolation
-        }
-
-        console.log(`Project with ID ${id} deleted successfully.`);
-        
-    } catch (error) {
-        console.error('Delete project error:', error);
-    }
-}
-
-
-
-
-
-
-
 // Function to delete a task by ID
 async function deleteTask(taskId) {
     try {
